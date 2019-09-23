@@ -1,0 +1,4 @@
+---
+cloudflared_tmp_directory: "{{ lookup('env', 'TMPDIR') | default('/tmp',true) }}"
+cloudflared_url: "https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.tgz"
+cloudflared_checksum: 0a6872b3a5ab21976942f7cd6b3b450d219270ac475ad3ab1d0bb78c4264171a

@@ -1,0 +1,12 @@
+---
+- name: Download cloudflared tar
+  get_url:
+    url: "{{ cloudflared_url }}"
+    checksum: "sha256:{{ cloudflared_checksum }}"
+    dest: "{{ cloudflared_tmp_directory }}"
+- name: Extract cloudflared
+  unarchive:
+    src: "{{ cloudflared_tmp_directory }}/cloudflared-stable-linux-amd64.tgz"
+    dest: /usr/local/bin
+    mode: 0755
+    remote_src: True
