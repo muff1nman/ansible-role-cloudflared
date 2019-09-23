@@ -3,7 +3,7 @@
   get_url:
     url: "{{ cloudflared_url }}"
     checksum: "sha256:{{ cloudflared_checksum }}"
-    dest: "{{ cloudflared_tmp_directory }}"
+    dest: "{{ cloudflared_tmp_directory }}/cloudflared-stable-linux-amd64.tgz"
 - name: Extract cloudflared
   unarchive:
     src: "{{ cloudflared_tmp_directory }}/cloudflared-stable-linux-amd64.tgz"
